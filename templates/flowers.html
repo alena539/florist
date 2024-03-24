@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %} Цветы {% endblock %}
+
+{% block zag %} <center> Немного о цветах </center> {% endblock %}
+
+{% block content %} 
+{% for flower in flowers %}
+    <div class="style">{{ flower }}</div>
+{% endfor %}
+
+<style>
+    .style {
+border: 1px solid black;
+padding: 5px;
+margin: 5px;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+background-color: lightgrey;
+}
+</style> 
+{% endblock %}
